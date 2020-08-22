@@ -10,13 +10,11 @@ TEST THE APPLICATION
 
 3. Log in using one of the accounts
 
-+---------+----------+-----------------------------+
-| user id | password |            roles            |
-+---------+----------+-----------------------------+
-| user    | fun123   | ROLE_EMPLOYEE               |
-|moderator| fun123   | ROLE_EMPLOYEE, ROLE_MANAGER |
-| admin   | fun123   | ROLE_EMPLOYEE, ROLE_ADMIN   |
-+---------+----------+-----------------------------+
+user id | password | roles 
+--- | --- | --- |
+user | fun123 | ROLE_EMPLOYEE 
+moderator | fun123 | ROLE_EMPLOYEE, ROLE_MANAGER 
+admin | fun123 | ROLE_EMPLOYEE, ROLE_ADMIN 
 
 4. Confirm that you can login and access data based on the roles.
 
