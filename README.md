@@ -6,7 +6,7 @@ TEST THE APPLICATION
  
 1. Run the Spring Boot application: ThymeleafdemoApplication.java
 
-2. Open a web browser for the app: http://localhost:8080
+2. Open a web browser for the app: http://localhost:8080/secureapp
 
 3. Log in using one of the accounts
 
