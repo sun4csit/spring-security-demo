@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+
+<head th:replace="fragments/head :: head"> 
+
+<title>Save Employee</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="d-flex justify-content-center h-100">
+			<div class="card" style="background-color: white !important;">
+				<div class="card-header">
+					<h3 style="color:black;">Employee Directory</h3>
+					<hr>
+
+					<p class="h4 mb-4">Save Employee</p>
+
+				</div>
+				<div class="card-body">
+					<form th:action="@{/employees/save}" th:object="${employee}"
+						method="POST">
+
+						<!-- Add hidden form field to handle update -->
+						<div class="input-group form-group">
+							<input type="hidden" th:field="*{id}" class="form-control" /> <input
+								type="text" th:field="*{firstName}" class="form-control"
+								placeholder="First name">
+						</div>
+
+						<div class="input-group form-group">
+							<input type="text" th:field="*{lastName}" class="form-control"
+								placeholder="Last name">
+						</div>
+						<div class="input-group form-group">
+							<input type="text" th:field="*{email}" class="form-control"
+								placeholder="Email">
+						</div>
+
+						<div class="input-group form-group">
+							<button type="submit" class="btn float-right login_btn">Save</button>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-center links">
+						<a th:href="@{/employees/list}">Back to Employees List</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

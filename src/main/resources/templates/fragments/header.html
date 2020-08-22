@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<body>
+
+	<nav class="navbar navbar-expand-sm  navbar-dark" th:fragment="header">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Security App</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item">User: <span sec:authentication="name"
+					class="pull-right">Bob</span>
+				</li>
+
+				<li>
+					<!-- Add a logout button -->
+					<form action="#" th:action="@{/logout}" method="POST">
+
+						<input type="submit" value="Logout"
+							class="btn btn-warning btn-sm mr-5 mb-3"
+							style="margin-left: 15px; height: 30px;" />
+					</form>
+				</li>
+			</ul>
+
+		</div>
+	</nav>
+</body>
+</html>
